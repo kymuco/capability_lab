@@ -1,0 +1,118 @@
+[project]
+site_name = "Capability Lab"
+site_description = "Evidence-grounded human capability modeling with explicit governance boundaries."
+site_author = "kymuco"
+site_url = "https://kymuco.github.io/capability_lab/"
+repo_url = "https://github.com/kymuco/capability_lab"
+repo_name = "kymuco/capability_lab"
+edit_uri = "edit/main/docs/"
+docs_dir = "docs"
+site_dir = "site"
+watch = [
+  "COMMERCIAL-LICENSING.md",
+  "LICENSE-HISTORY.md",
+  "PUBLICATION.md",
+  "SECURITY.md",
+]
+copyright = "Capability Lab · PolyForm Noncommercial 1.0.0"
+extra_css = [
+  "stylesheets/capability.css",
+]
+strict = true
+nav = [
+  { "Overview" = "index.md" },
+  { "Understand the model" = "overview.md" },
+  { "Governed pipeline" = "governed-pipeline.md" },
+  { "Consumer boundary" = "consumer-boundary.md" },
+  { "Foundations" = [
+    { "Architecture" = "architecture.md" },
+    { "Constitution" = "constitution.md" },
+    { "Vocabulary" = "vocabulary.md" },
+  ] },
+  { "Executable proofs" = [
+    { "Observation → governed current state" = "generic_capability_inference_e2e_audit_v1.md" },
+    { "Observation → governed product/read" = "generic_governed_product_read_e2e_audit_v1.md" },
+  ] },
+  { "Reference" = [
+    { "Reference map & archive" = "reference/archive.md" },
+    { "Documentation standard" = "STYLE.md" },
+  ] },
+  { "Project" = [
+    { "Commercial licensing" = "project/commercial-licensing.md" },
+    { "License history" = "project/license-history.md" },
+    { "Security & privacy" = "security.md" },
+    { "Publication lineage" = "project/publication.md" },
+    { "Roadmap / checkpoint" = "roadmap.md" },
+  ] },
+]
+
+[project.theme]
+variant = "modern"
+font = false
+features = [
+  "navigation.instant",
+  "navigation.tracking",
+  "navigation.sections",
+  "navigation.path",
+  "navigation.top",
+  "navigation.footer",
+  "toc.follow",
+  "search.highlight",
+  "content.code.copy",
+  "content.tooltips",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[project.extra]
+generator = false
+
+[project.validation]
+invalid_links = true
+invalid_link_anchors = true
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
+zensical.extensions.macros.module_name = "docs_macros"
+zensical.extensions.macros.on_error_fail = true
+zensical.extensions.macros.on_undefined = "strict"
