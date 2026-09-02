@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/capability-lab-banner.png" alt="Capability Lab banner" width="100%">
+</p>
+
 # Capability Lab
 
 **Evidence-grounded capability modeling under explicit governance boundaries.**
