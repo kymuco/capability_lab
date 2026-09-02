@@ -1,0 +1,63 @@
+name: Research or architecture discussion
+description: Propose a research question, architecture idea, interoperability case, or conceptual adversarial test.
+title: "[Research]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Research discussion and conceptual proposals are welcome.
+
+        Until a dedicated Contributor License Agreement or equivalent rights process exists,
+        **substantive third-party authored material cannot be merged automatically**.
+        This Issue Form is for discussion only and **does not grant contributor or relicensing rights**.
+
+        Use public, synthetic, or otherwise non-sensitive evidence only. Follow `SECURITY.md` for
+        security- or privacy-sensitive material.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question or proposal
+      description: State the idea as precisely as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: invariant
+    attributes:
+      label: Affected invariant or boundary
+      description: |
+        Which distinction is relevant? Examples: observation/evidence, evidence/claim,
+        accepted/current state, progression/prescription, capability/permission.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or motivating observation
+      description: Public, synthetic, or non-sensitive material only.
+
+  - type: textarea
+    id: failure_modes
+    attributes:
+      label: Failure modes
+      description: What could go wrong if the proposal is accepted or if the current architecture remains unchanged?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed scope
+      description: What is explicitly in scope and out of scope?
+
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Discussion boundary
+      options:
+        - label: I understand this public issue is a discussion channel and not a contributor-rights agreement.
+          required: true
+        - label: I have not included private or sensitive payloads.
+          required: true

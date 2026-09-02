@@ -1,0 +1,49 @@
+name: Documentation problem
+description: Report inaccurate, unclear, stale, or contradictory public documentation.
+title: "[Docs]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Documentation reports are welcome.
+
+        Do not attach private research workspaces, participant data, credentials, or other sensitive material.
+        If the documentation issue exposes a security or privacy problem, follow `SECURITY.md`.
+
+  - type: input
+    id: location
+    attributes:
+      label: Documentation location
+      description: File, heading, or documentation page.
+      placeholder: README.md / Current architecture
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is inaccurate or unclear?
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: A conceptual correction is enough; substantive authored material is not required.
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Why it matters
+      description: Note any epistemic, licensing, privacy, consumer-boundary, or authority ambiguity this could create.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public-report safety
+      options:
+        - label: This report contains no private or sensitive payloads.
+          required: true
