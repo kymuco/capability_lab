@@ -28,6 +28,39 @@ HISTORICAL DOCUMENT REFERENCES
 != PUBLISHED COMMIT ANCESTRY
 ```
 
+## PUBLICATION-1 release baseline
+
+The frozen initial public root for this lineage is:
+
+```text
+febe79f9630858c2e01e3ed57ae1bfd7736227ba
+Initial public source-available release
+```
+
+PUBLICATION-1 does not rewrite that root. It establishes the first ordinary
+post-root release baseline and makes the lineage boundary executable in hosted
+CI.
+
+The public-lineage gate requires:
+
+- exactly one reachable Git root from the proposed public `HEAD`;
+- that root to equal the frozen initial public root above;
+- the frozen root to have zero parents;
+- the frozen root author and committer metadata to use GitHub's noreply identity;
+- owner-authored commits after the root to use GitHub's noreply identity.
+
+```text
+FROZEN PUBLIC ROOT
+!= MUTABLE RELEASE METADATA
+
+ONE CLEAN PUBLIC ROOT
+!= IMPORTED HISTORICAL GIT ANCESTRY
+```
+
+This gate is a repository-integrity contract. It does not replace the software
+license, establish ownership by itself, or rewrite rights granted for earlier
+distributed copies.
+
 ## Current checkpoint
 
 The current distribution represents a stable research-subsystem checkpoint

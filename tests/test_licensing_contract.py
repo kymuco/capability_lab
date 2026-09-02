@@ -16,7 +16,7 @@ ZENSICAL = ROOT / "zensical.toml"
 
 POLYFORM_ID = "PolyForm-Noncommercial-1.0.0"
 POLYFORM_URL = "https://polyformproject.org/licenses/noncommercial/1.0.0"
-OLD_PRIVATE_CHECKPOINT = "919ca04004b6f72bbdcd937268b1eda4e5056462"
+PUBLIC_ROOT = "febe79f9630858c2e01e3ed57ae1bfd7736227ba"
 
 
 def test_root_license_is_polyform_noncommercial_with_required_notice():
@@ -74,7 +74,6 @@ def test_license_history_is_public_facing_and_nonretroactive():
     assert POLYFORM_ID in text
     assert "do not extend to revisions first distributed" in normalized
 
-    assert OLD_PRIVATE_CHECKPOINT not in text
     assert "private master" not in text.lower()
     assert "PR #28" not in text
     assert "future public" not in text.lower()
@@ -93,10 +92,23 @@ def test_publication_record_describes_the_current_clean_public_lineage():
     assert "SOURCE-AVAILABLE" in text
     assert "!= OSI OPEN SOURCE" in text
 
-    assert OLD_PRIVATE_CHECKPOINT not in text
     assert "private master" not in text.lower()
     assert "future public" not in text.lower()
     assert "remains a separate release action" not in text
+
+
+def test_publication_1_records_frozen_public_root_without_rewriting_license_history():
+    text = PUBLICATION.read_text(encoding="utf-8")
+    normalized = " ".join(text.split())
+
+    assert "## PUBLICATION-1 release baseline" in text
+    assert PUBLIC_ROOT in text
+    assert "exactly one reachable Git root" in normalized
+    assert "frozen root to have zero parents" in normalized
+    assert "GitHub's noreply identity" in normalized
+    assert "owner-authored commits after the root" in normalized
+    assert "repository-integrity contract" in normalized
+    assert "does not replace the software license" in normalized
 
 
 def test_contributor_policy_does_not_treat_public_license_as_relicensing_authority():
@@ -110,7 +122,6 @@ def test_contributor_policy_does_not_treat_public_license_as_relicensing_authori
     assert "contributor agreement" in text
     assert "merged until the required contributor-rights terms are in place" in text
     assert "retained Git history" not in text
-    assert OLD_PRIVATE_CHECKPOINT not in text
 
 
 def test_public_front_doors_describe_current_source_available_model():
