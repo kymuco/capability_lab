@@ -60,7 +60,10 @@ def test_issue_forms_exist_and_keep_sensitive_reports_out_of_public_issues():
     assert "synthetic or non-sensitive data" in bug
     assert "private or sensitive payloads" in docs
 
-    assert "substantive third-party authored material cannot be merged automatically" in research
+    assert "substantive third-party authored material is not accepted for inclusion" in research
+    assert "cannot be merged" in research
+    assert "until that rights process is in place" in research
+    assert "cannot be merged automatically" not in research
     assert "does not grant contributor or relicensing rights" in research
     assert "not a contributor-rights agreement" in research
     assert "private or sensitive payloads" in research

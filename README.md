@@ -128,7 +128,7 @@ Security- or privacy-sensitive reports must follow [SECURITY.md](SECURITY.md). D
 person-scoped records, private captures, private workspaces, or exploit details into a public issue.
 
 Research discussion and conceptual proposals are welcome. Until a dedicated contributor-rights process exists,
-substantive third-party authored material cannot be merged automatically; see
+substantive third-party authored material is not accepted for inclusion and cannot be merged; see
 [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
