@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 from dataclasses import dataclass
 
@@ -8,6 +9,7 @@ from dataclasses import dataclass
 EXPECTED_ROOT = "febe79f9630858c2e01e3ed57ae1bfd7736227ba"
 NOREPLY_SUFFIX = "@users.noreply.github.com"
 OWNER_NAMES = frozenset({"kymuco", "ikymuco"})
+HEAD_ENV = "PUBLIC_LINEAGE_HEAD_SHA"
 
 
 @dataclass(frozen=True)
@@ -29,11 +31,19 @@ def _git(*args: str) -> str:
     return completed.stdout.strip()
 
 
-def _owner_identity_violations() -> tuple[str, ...]:
+def resolve_target_ref(value: str | None = None) -> str:
+    candidate = value if value is not None else os.environ.get(HEAD_ENV)
+    if candidate is None:
+        return "HEAD"
+    candidate = candidate.strip()
+    return candidate or "HEAD"
+
+
+def _owner_identity_violations(target_ref: str) -> tuple[str, ...]:
     output = _git(
         "log",
         "--format=%H%x09%an%x09%ae%x09%cn%x09%ce",
-        f"{EXPECTED_ROOT}..HEAD",
+        f"{EXPECTED_ROOT}..{target_ref}",
     )
     violations: list[str] = []
 
@@ -55,10 +65,12 @@ def _owner_identity_violations() -> tuple[str, ...]:
     return tuple(violations)
 
 
-def collect_lineage_facts() -> LineageFacts:
+def collect_lineage_facts(target_ref: str | None = None) -> LineageFacts:
+    target_ref = resolve_target_ref(target_ref)
+
     roots = tuple(
         line.strip()
-        for line in _git("rev-list", "--max-parents=0", "HEAD").splitlines()
+        for line in _git("rev-list", "--max-parents=0", target_ref).splitlines()
         if line.strip()
     )
     root_parents = tuple(
@@ -73,7 +85,7 @@ def collect_lineage_facts() -> LineageFacts:
         root_parents=root_parents,
         author_email=author_email,
         committer_email=committer_email,
-        owner_identity_violations=_owner_identity_violations(),
+        owner_identity_violations=_owner_identity_violations(target_ref),
     )
 
 
@@ -104,11 +116,13 @@ def evaluate_lineage(facts: LineageFacts) -> tuple[str, ...]:
 
 
 def main() -> int:
-    facts = collect_lineage_facts()
+    target_ref = resolve_target_ref()
+    facts = collect_lineage_facts(target_ref)
     failures = evaluate_lineage(facts)
     payload = {
         "ok": not failures,
         "expected_root": EXPECTED_ROOT,
+        "target_ref": target_ref,
         "observed_roots": list(facts.roots),
         "root_parent_count": len(facts.root_parents),
         "root_author_noreply": facts.author_email.endswith(NOREPLY_SUFFIX),

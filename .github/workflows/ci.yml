@@ -24,6 +24,8 @@ jobs:
           fetch-depth: 0
 
       - name: Verify public lineage baseline
+        env:
+          PUBLIC_LINEAGE_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: python tools/public_lineage_gate.py
 
       - name: Set up Python 3.11
