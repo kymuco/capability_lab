@@ -4,30 +4,57 @@ hide:
 ---
 
 <div class="cl-hero">
-  <div class="cl-eyebrow">Evidence-grounded capability modeling</div>
-  <h1>Capability claims you can inspect.</h1>
+  <div class="cl-eyebrow">Evidence-backed human capability modeling</div>
+  <h1>Know what the evidence actually supports.</h1>
   <p class="cl-lede">
-    Capability Lab is a governed research framework for representing what was observed,
-    what the evidence can support, what remains uncertain, and what may be worth exploring next —
-    without turning the model into authority over the person.
+    Capability Lab is an experimental framework for building a careful capability profile:
+    what the evidence supports now, what remains unknown or conflicting, and what may be worth
+    exploring next — without turning the model into authority over the person.
   </p>
   <div class="cl-actions">
-    <a class="md-button md-button--primary" href="overview/">Understand the model</a>
-    <a class="md-button" href="governed-pipeline/">Follow the governed pipeline</a>
+    <a class="md-button md-button--primary" href="getting-started/">Capability Lab in 5 minutes</a>
+    <a class="md-button" href="governed-pipeline/">See how it works</a>
   </div>
 </div>
 
 <div class="cl-proof" markdown>
-  <div><strong>Append-only</strong><span>evidence and evaluation history</span></div>
-  <div><strong>Explicit gates</strong><span>human review and runtime admission</span></div>
-  <div><strong>Complete history</strong><span>no hidden latest-wins shortcut</span></div>
-  <div><strong>Read ≠ authority</strong><span>projection never grants permission</span></div>
+  <div><strong>Evidence-backed</strong><span>claims stay connected to what supports them</span></div>
+  <div><strong>Unknown stays unknown</strong><span>missing evidence does not become zero</span></div>
+  <div><strong>History preserved</strong><span>new results do not silently erase old ones</span></div>
+  <div><strong>Advice ≠ authority</strong><span>progression never becomes permission</span></div>
 </div>
 
-## A model that preserves the difference between knowing and deciding
+## A real-world skill tree that has to show its work
 
-Most capability systems collapse several questions into one score: what happened, what it means,
-how confident the system is, what the person should do next, and whether they are allowed to act.
+The easiest intuition is a skill tree or player profile — except a capability does not appear because an XP bar
+filled up. It has to remain grounded in real evidence, context, uncertainty, and history.
+
+Capability Lab is interested in questions such as:
+
+- What does the current evidence actually support?
+- What do we still not know?
+- Where does the evidence disagree?
+- What development path might be useful to explore next?
+- How can a product show that state without turning it into a ranking or permission system?
+
+## One example
+
+Someone builds and explains a working low-voltage motor circuit.
+
+| Layer | Meaning |
+| --- | --- |
+| Activity | A circuit was built, tested, and explained. |
+| Reviewed evidence | The artifact, explanation, and test results were admitted as evidence. |
+| Supported scope | The evidence may support a bounded claim about basic low-voltage circuit construction. |
+| Unknown | RF design, high-voltage work, retention, and other unevidenced areas stay unknown. |
+| Possible next step | The system may advise trying an unfamiliar diagnostic task next. |
+
+Capability Lab does not turn that one event into an unexplained number such as `Electrical engineering: 87%`.
+
+## The core idea
+
+Most capability systems collapse several different questions into one score: what happened, what it means,
+how certain the result is, what the person should do next, and whether they are allowed to act.
 
 Capability Lab keeps those questions separate.
 
@@ -48,20 +75,20 @@ observation
 </div>
 
 <div class="cl-path-grid">
+  <a class="cl-path-card" href="getting-started/">
+    <span class="cl-kicker">01 · Start here</span>
+    <strong>Understand Capability Lab in 5 minutes</strong>
+    <p>Walk through one concrete example from activity to evidence, capability state, and advisory progression.</p>
+  </a>
   <a class="cl-path-card" href="overview/">
-    <span class="cl-kicker">01 · Mental model</span>
+    <span class="cl-kicker">02 · Mental model</span>
     <strong>Understand the layers</strong>
     <p>See why evidence, uncertainty, conflict, state, and authority are deliberately different objects.</p>
-  </a>
-  <a class="cl-path-card" href="governed-pipeline/">
-    <span class="cl-kicker">02 · Provenance</span>
-    <strong>Follow the governed pipeline</strong>
-    <p>Trace a reviewed external observation through evaluation, state, progression, and the product/read boundary.</p>
   </a>
   <a class="cl-path-card" href="consumer-boundary/">
     <span class="cl-kicker">03 · Integration</span>
     <strong>Consume without taking authority</strong>
-    <p>Use the stable PR11.11 read boundary while preserving fresh validation and governance semantics.</p>
+    <p>Use the stable governed read boundary without turning a product view into capability write-back or permission.</p>
   </a>
 </div>
 
@@ -81,9 +108,8 @@ flowchart LR
     V --> W
 ```
 
-PR12.13 proves the generic path reaches governed current state without bypassing the existing gates.
-PR12.14 extends that proof through advisory progression, complete current profile, and the PR11.11
-product/read snapshot.
+Executable end-to-end audits cover the path from reviewed external observation through governed current state
+and through the product/read boundary without adding a shortcut around the existing gates.
 
 [Read the end-to-end current-state audit](generic_capability_inference_e2e_audit_v1.md){ .cl-inline-link }
 ·
@@ -106,4 +132,5 @@ conflict, retains historical evaluations, requires explicit state acceptance and
 and treats serialized artifacts as audit data that must revalidate against live governed sources.
 
 For the underlying contracts, start with the [architecture](architecture.md), then use the
-[reference map](reference/archive.md) to reach the detailed PR-specific documents and historical Pilot material.
+[reference map](reference/archive.md) to reach the detailed implementation-specific documents and historical
+Pilot material.

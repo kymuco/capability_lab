@@ -110,7 +110,7 @@ def test_homepage_contains_intentional_documentation_product_primitives():
         assert primitive in homepage
         assert f".{primitive}" in css
 
-    assert "Capability claims you can inspect." in homepage
+    assert "Know what the evidence actually supports." in homepage
     assert "product/read projection" in homepage
     assert "permission or authority" in homepage
 
@@ -139,6 +139,7 @@ def test_root_contract_wrappers_remain_thin_and_canonical():
 def test_curated_portal_links_do_not_escape_docs_root():
     curated = (
         DOCS / "index.md",
+        DOCS / "getting-started.md",
         DOCS / "overview.md",
         DOCS / "governed-pipeline.md",
         DOCS / "consumer-boundary.md",
