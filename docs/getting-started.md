@@ -10,6 +10,8 @@ uncertainty, and history behind it.
 
 This is an intuition, not the formal data model. Capability Lab is a research framework, not a game.
 
+> **Example note:** the walkthrough below is conceptual. The repository separately includes an executable `Basic Electricity` Player Window presentation demo and generic end-to-end governed integration proofs; they are intentionally different fixtures.
+
 ## A concrete example
 
 Imagine someone is learning electronics.

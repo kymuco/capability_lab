@@ -57,7 +57,7 @@ The curated portal must not create competing versions of normative contracts.
 
 - `docs/constitution.md`, `docs/architecture.md`, and `docs/vocabulary.md` remain canonical foundations.
 - PR-specific contract documents remain the detailed history and source of exact semantics.
-- root `SECURITY.md`, `PUBLICATION.md`, `COMMERCIAL-LICENSING.md`, and `LICENSE-HISTORY.md` remain canonical project records; docs wrappers include them rather than copying them.
+- root `SECURITY.md` and `PUBLICATION.md` remain canonical project records exposed through thin docs wrappers; `docs/project/commercial-licensing.md` and `docs/project/license-history.md` are canonical project records directly under the documentation tree.
 - root `LICENSE` remains the canonical current software-license text and is not duplicated into a curated docs page.
 - executable integration tests remain the strongest evidence that architecture layers actually compose.
 - executable licensing/documentation contract tests guard repository-facing metadata and canonical wrappers; they do not replace legal review of license terms.

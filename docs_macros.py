@@ -6,8 +6,6 @@ from pathlib import Path
 _REPO_ROOT = Path(__file__).resolve().parent
 _ALLOWED_CONTRACTS = frozenset(
     {
-        "COMMERCIAL-LICENSING.md",
-        "LICENSE-HISTORY.md",
         "PUBLICATION.md",
         "SECURITY.md",
     }

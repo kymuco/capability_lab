@@ -14,8 +14,8 @@ Please read:
 - `docs/architecture.md`
 - `docs/vocabulary.md`
 - `LICENSE`
-- `LICENSE-HISTORY.md`
-- `COMMERCIAL-LICENSING.md`
+- `docs/project/license-history.md`
+- `docs/project/commercial-licensing.md`
 
 The following distinctions are foundational and must not be collapsed for
 convenience:
@@ -117,4 +117,4 @@ Earlier distributed versions of Capability Lab may be governed by different
 license terms. The current contribution policy applies to this public lineage
 and does not claim to rewrite rights already granted for earlier copies.
 
-See `LICENSE-HISTORY.md` for the concise licensing transition record.
+See `docs/project/license-history.md` for the concise licensing transition record.

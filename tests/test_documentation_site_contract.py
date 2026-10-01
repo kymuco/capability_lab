@@ -34,8 +34,6 @@ EXPECTED_HOMEPAGE_PRIMITIVES = {
     "cl-boundary",
 }
 CANONICAL_WRAPPERS = {
-    DOCS / "project" / "commercial-licensing.md": '{{ include_contract("COMMERCIAL-LICENSING.md") }}',
-    DOCS / "project" / "license-history.md": '{{ include_contract("LICENSE-HISTORY.md") }}',
     DOCS / "project" / "publication.md": '{{ include_contract("PUBLICATION.md") }}',
     DOCS / "security.md": '{{ include_contract("SECURITY.md") }}',
 }
@@ -70,8 +68,6 @@ def test_documentation_site_configuration_is_public_checkpoint_contract():
     assert project["extra_css"] == ["stylesheets/capability.css"]
     assert project["copyright"] == "Capability Lab · PolyForm Noncommercial 1.0.0"
     assert set(project["watch"]) == {
-        "COMMERCIAL-LICENSING.md",
-        "LICENSE-HISTORY.md",
         "PUBLICATION.md",
         "SECURITY.md",
     }
@@ -121,8 +117,8 @@ def test_root_readme_is_a_front_door_not_pr_chronology():
     assert "https://kymuco.github.io/capability_lab/" in readme
     assert "Observation is not evidence." in readme
     assert "PolyForm Noncommercial License 1.0.0" in readme
-    assert "COMMERCIAL-LICENSING.md" in readme
-    assert "LICENSE-HISTORY.md" in readme
+    assert "docs/project/commercial-licensing.md" in readme
+    assert "docs/project/license-history.md" in readme
     assert "## Implemented sequence" not in readme
     assert readme.count("**PR12.") < 3
 

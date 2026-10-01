@@ -106,12 +106,12 @@ PUBLIC SOURCE ACCESS
 ```
 
 Commercial uses that require rights beyond the public license require separate
-written commercial licensing. See `COMMERCIAL-LICENSING.md`.
+written commercial licensing. See `docs/project/commercial-licensing.md`.
 
 Earlier versions of Capability Lab were previously distributed under
 Apache-2.0. Rights already granted for those earlier copies remain in force for
 those copies; the current license does not retroactively rewrite them. See
-`LICENSE-HISTORY.md`.
+`docs/project/license-history.md`.
 
 Nothing in this publication record narrows fair use or other rights provided by
 applicable law.

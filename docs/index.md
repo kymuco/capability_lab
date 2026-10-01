@@ -37,19 +37,23 @@ Capability Lab is interested in questions such as:
 - What development path might be useful to explore next?
 - How can a product show that state without turning it into a ranking or permission system?
 
-## One example
+## One executable presentation example
 
-Someone builds and explains a working low-voltage motor circuit.
+The repository includes a dependency-free Civilization Bootstrap Player Window demo. Its synthetic example
+constructs:
 
-| Layer | Meaning |
+| Layer | Included demo |
 | --- | --- |
-| Activity | A circuit was built, tested, and explained. |
-| Reviewed evidence | The artifact, explanation, and test results were admitted as evidence. |
-| Supported scope | The evidence may support a bounded claim about basic low-voltage circuit construction. |
-| Unknown | RF design, high-voltage work, retention, and other unevidenced areas stay unknown. |
-| Possible next step | The system may advise trying an unfamiliar diagnostic task next. |
+| Capability | `Basic Electricity` |
+| Evidence | A bounded low-voltage DC setup analyzed and checked with explicit assumptions |
+| Supported dimension | `conceptual_knowledge` |
+| Claim scope | Bounded low-voltage conceptual analysis only |
+| Progression frontier | `Low-Voltage Power Distribution` |
+| Exploration opportunity | `Potable Water Treatment` |
 
-Capability Lab does not turn that one event into an unexplained number such as `Electrical engineering: 87%`.
+The presentation demo is intentionally separate from the generic governed write-path proof. The generic
+integration suites independently verify external observation → reviewed evidence → bounded claim →
+domain evaluation → governed current state → progression/product-read composition.
 
 ## The core idea
 
@@ -78,7 +82,7 @@ observation
   <a class="cl-path-card" href="getting-started/">
     <span class="cl-kicker">01 · Start here</span>
     <strong>Understand Capability Lab in 5 minutes</strong>
-    <p>Walk through one concrete example from activity to evidence, capability state, and advisory progression.</p>
+    <p>Walk through the conceptual model from activity to evidence, capability state, and advisory progression.</p>
   </a>
   <a class="cl-path-card" href="overview/">
     <span class="cl-kicker">02 · Mental model</span>

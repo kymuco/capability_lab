@@ -6,8 +6,8 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
 LICENSE = ROOT / "LICENSE"
-LICENSE_HISTORY = ROOT / "LICENSE-HISTORY.md"
-COMMERCIAL = ROOT / "COMMERCIAL-LICENSING.md"
+LICENSE_HISTORY = ROOT / "docs/project/license-history.md"
+COMMERCIAL = ROOT / "docs/project/commercial-licensing.md"
 CONTRIBUTING = ROOT / "CONTRIBUTING.md"
 PUBLICATION = ROOT / "PUBLICATION.md"
 README = ROOT / "README.md"
@@ -17,6 +17,14 @@ ZENSICAL = ROOT / "zensical.toml"
 POLYFORM_ID = "PolyForm-Noncommercial-1.0.0"
 POLYFORM_URL = "https://polyformproject.org/licenses/noncommercial/1.0.0"
 PUBLIC_ROOT = "febe79f9630858c2e01e3ed57ae1bfd7736227ba"
+
+
+def test_auxiliary_licensing_records_live_outside_repository_root():
+    assert LICENSE.is_file()
+    assert LICENSE_HISTORY.is_file()
+    assert COMMERCIAL.is_file()
+    assert not (ROOT / "LICENSE-HISTORY.md").exists()
+    assert not (ROOT / "COMMERCIAL-LICENSING.md").exists()
 
 
 def test_root_license_is_polyform_noncommercial_with_required_notice():
@@ -130,8 +138,8 @@ def test_public_front_doors_describe_current_source_available_model():
 
     assert "source-available" in readme.lower()
     assert "not OSI open source" in readme
-    assert "COMMERCIAL-LICENSING.md" in readme
-    assert "LICENSE-HISTORY.md" in readme
+    assert "docs/project/commercial-licensing.md" in readme
+    assert "docs/project/license-history.md" in readme
     assert zensical["copyright"] == "Capability Lab · PolyForm Noncommercial 1.0.0"
     assert "Commercial licensing" in str(zensical["nav"])
     assert "License history" in str(zensical["nav"])

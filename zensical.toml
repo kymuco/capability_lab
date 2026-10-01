@@ -9,8 +9,6 @@ edit_uri = "edit/main/docs/"
 docs_dir = "docs"
 site_dir = "site"
 watch = [
-  "COMMERCIAL-LICENSING.md",
-  "LICENSE-HISTORY.md",
   "PUBLICATION.md",
   "SECURITY.md",
 ]

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+<title id="title">Capability Lab example Player Window projection</title>
+<desc id="desc">Example projection grounded in the included Civilization Bootstrap Player Window demo. Basic Electricity is supported for conceptual knowledge from bounded low-voltage evidence. The progression frontier includes Low-Voltage Power Distribution and an exploration opportunity for Potable Water Treatment. The projection is not a global score and does not grant mastery or permission.</desc>
+<defs>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <path d="M32 0H0V32" fill="none" stroke="#15304a" stroke-width="1" opacity=".28"/>
+    <circle cx="0" cy="0" r="1.2" fill="#2f6fa8" opacity=".3"/>
+  </pattern>
+</defs>
+<rect width="1600" height="620" rx="28" fill="#060f1a"/>
+<rect x="1" y="1" width="1598" height="618" rx="27" fill="none" stroke="#183650" stroke-width="2"/>
+<rect width="1600" height="620" rx="28" fill="url(#grid)" opacity=".52"/>
+<rect x="54" y="48" width="1492" height="524" rx="22" fill="#081522" stroke="#24537a" stroke-width="1.5"/>
+
+<text x="88" y="91" fill="#79bdf0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700" letter-spacing="2.4">EXAMPLE PLAYER WINDOW PROJECTION</text>
+<text x="1510" y="91" text-anchor="end" fill="#6f88a0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">civilization_bootstrap / demo</text>
+<line x1="88" y1="116" x2="1510" y2="116" stroke="#204560"/>
+
+<text x="88" y="175" fill="#f4f7fb" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">Basic Electricity</text>
+<rect x="88" y="198" width="154" height="38" rx="19" fill="#0e3b35" stroke="#287a67"/>
+<circle cx="111" cy="217" r="5.5" fill="#6bd8b4"/>
+<text x="128" y="223" fill="#a5ead4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.2">SUPPORTED</text>
+<rect x="254" y="198" width="218" height="38" rx="19" fill="#0b2238" stroke="#245a87"/>
+<text x="363" y="223" text-anchor="middle" fill="#9bcaf0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="600">conceptual_knowledge</text>
+
+<text x="88" y="278" fill="#6f9fc4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.5">EVIDENCE</text>
+<text x="88" y="311" fill="#d8e2ec" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22">Analyzed and checked a bounded low-voltage DC setup</text>
+<text x="88" y="341" fill="#d8e2ec" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22">with explicit assumptions.</text>
+
+<text x="88" y="390" fill="#6f9fc4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.5">BOUNDED CLAIM</text>
+<text x="88" y="423" fill="#f0f4f8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">Can explain bounded basic-electricity relationships under explicit assumptions.</text>
+
+<text x="88" y="471" fill="#6f9fc4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.5">SCOPE</text>
+<text x="88" y="503" fill="#b6c6d6" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">Bounded low-voltage conceptual analysis only.</text>
+
+<line x1="1010" y1="153" x2="1010" y2="515" stroke="#204560"/>
+
+<text x="1050" y="176" fill="#79bdf0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.5">PROGRESSION FRONTIER</text>
+<text x="1050" y="213" fill="#f2f6fa" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="25" font-weight="650">Low-Voltage Power</text>
+<text x="1050" y="244" fill="#f2f6fa" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="25" font-weight="650">Distribution</text>
+<text x="1050" y="278" fill="#8aa1b6" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17">advisory progression frontier</text>
+
+<line x1="1050" y1="308" x2="1478" y2="308" stroke="#183b58"/>
+
+<text x="1050" y="350" fill="#79bdf0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.5">EXPLORATION</text>
+<text x="1050" y="389" fill="#dfe9f2" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Potable Water Treatment</text>
+<text x="1050" y="422" fill="#8aa1b6" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17">kept visible outside the electrical frontier</text>
+
+<rect x="1050" y="460" width="428" height="58" rx="12" fill="#08131f" stroke="#244b69"/>
+<text x="1073" y="484" fill="#7f9bb2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" letter-spacing="1.2">NO GLOBAL SCORE</text>
+<text x="1073" y="507" fill="#c8d5df" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16">Evidence-backed state, not “human level”.</text>
+
+<line x1="88" y1="536" x2="1510" y2="536" stroke="#204560"/>
+<text x="88" y="562" fill="#7391aa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">EVIDENCE-BACKED · BOUNDED SCOPE · ADVISORY PROGRESSION</text>
+<text x="1510" y="562" text-anchor="end" fill="#90abc1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">SUPPORTED != MASTERY · PROGRESSION != PERMISSION</text>
+</svg>
