@@ -98,7 +98,10 @@ observation
 
 ## The complete public path
 
-![Compact Capability Lab architecture overview: observe and interpret, establish current state, then advise and present.](assets/capability-lab-architecture-strip.svg)
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/capability-lab-architecture-stack.svg">
+  <img src="assets/capability-lab-architecture-strip.svg" alt="Compact Capability Lab architecture overview: observe and interpret, establish current state, then advise and present." width="100%">
+</picture>
 
 The strip is intentionally compact. [Follow the governed pipeline](governed-pipeline.md) for the exact
 stage-by-stage contracts.

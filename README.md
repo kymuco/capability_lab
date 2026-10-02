@@ -70,7 +70,10 @@ automatic closed-loop judge of a person.
 ## How it works
 
 <p align="center">
-  <img src="docs/assets/capability-lab-architecture-strip.svg" alt="Compact Capability Lab architecture overview: observe and interpret, establish current state, then advise and present." width="100%">
+  <picture>
+    <source media="(max-width: 640px)" srcset="docs/assets/capability-lab-architecture-stack.svg">
+    <img src="docs/assets/capability-lab-architecture-strip.svg" alt="Compact Capability Lab architecture overview: observe and interpret, establish current state, then advise and present." width="100%">
+  </picture>
 </p>
 
 This is the compact mental model. [Follow the full governed pipeline](docs/governed-pipeline.md) for the exact

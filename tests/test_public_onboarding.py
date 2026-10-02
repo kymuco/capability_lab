@@ -9,6 +9,7 @@ DOCS_INDEX = ROOT / "docs" / "index.md"
 GETTING_STARTED = ROOT / "docs" / "getting-started.md"
 SNAPSHOT = ROOT / ".github" / "assets" / "capability-lab-player-window-snapshot.svg"
 ARCHITECTURE_STRIP = ROOT / "docs" / "assets" / "capability-lab-architecture-strip.svg"
+ARCHITECTURE_STACK = ROOT / "docs" / "assets" / "capability-lab-architecture-stack.svg"
 ZENSICAL = ROOT / "zensical.toml"
 
 
@@ -97,13 +98,22 @@ def test_public_overview_diagrams_are_readable_without_mermaid_viewer():
     readme = README.read_text(encoding="utf-8")
     docs_index = DOCS_INDEX.read_text(encoding="utf-8")
     strip = ARCHITECTURE_STRIP.read_text(encoding="utf-8")
+    stack = ARCHITECTURE_STACK.read_text(encoding="utf-8")
 
     assert "docs/assets/capability-lab-architecture-strip.svg" in readme
+    assert "docs/assets/capability-lab-architecture-stack.svg" in readme
     assert "assets/capability-lab-architecture-strip.svg" in docs_index
+    assert "assets/capability-lab-architecture-stack.svg" in docs_index
+    assert 'media="(max-width: 640px)"' in readme
+    assert 'media="(max-width: 640px)"' in docs_index
     assert "```mermaid" not in readme
     assert "```mermaid" not in docs_index
+    assert 'width="1200"' in strip
     assert 'height="260"' in strip
+    assert 'width="640"' in stack
+    assert 'height="560"' in stack
     assert "READ SNAPSHOT != CAPABILITY AUTHORITY != PERMISSION" in strip
+    assert "READ SNAPSHOT != AUTHORITY != PERMISSION" in stack
 
 
 def test_five_minute_introduction_stays_plain_language():

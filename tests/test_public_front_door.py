@@ -39,6 +39,8 @@ def test_readme_architecture_visual_preserves_governed_boundaries():
     )
 
     assert "docs/assets/capability-lab-architecture-strip.svg" in text
+    assert "docs/assets/capability-lab-architecture-stack.svg" in text
+    assert 'media="(max-width: 640px)"' in text
     assert "```mermaid" not in text
 
     for phrase in (
@@ -58,6 +60,8 @@ def test_readme_architecture_visual_preserves_governed_boundaries():
     assert "linearGradient" not in strip
     assert "zoom" not in strip.lower()
     assert "pan" not in strip.lower()
+    assert strip.count("READ SNAPSHOT != CAPABILITY AUTHORITY != PERMISSION") == 1
+    assert "COMPACT MENTAL MODEL" not in strip
 
     assert "!= CURRENT-STATE SELECTION AUTHORITY" in text
     assert "!= PROGRESSION AUTHORITY" in text

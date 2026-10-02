@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="560" viewBox="0 0 640 560" role="img" aria-labelledby="title desc">
+<title id="title">Capability Lab compact mobile architecture overview</title>
+<desc id="desc">Mobile three-stage conceptual overview: observe and interpret; establish current state; advise and present.</desc>
+<defs>
+  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+    <path d="M28 0H0V28" fill="none" stroke="#17334b" stroke-width="1" opacity=".22"/>
+    <circle cx="0" cy="0" r="1" fill="#326d9d" opacity=".26"/>
+  </pattern>
+</defs>
+<rect width="640" height="560" rx="22" fill="#06111c"/>
+<rect x="1" y="1" width="638" height="558" rx="21" fill="none" stroke="#1e405c" stroke-width="2"/>
+<rect width="640" height="560" rx="22" fill="url(#grid)" opacity=".48"/>
+<text x="42" y="52" fill="#72b7eb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="700" letter-spacing="1.2">01 · OBSERVE &amp; INTERPRET</text>
+<text x="42" y="91" fill="#f2f6fa" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">External observation</text>
+<text x="42" y="126" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26">Human-reviewed evidence</text>
+<text x="42" y="160" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26">Bounded capability claim</text>
+<line x1="42" y1="191" x2="598" y2="191" stroke="#1c405c"/>
+<text x="42" y="232" fill="#72b7eb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="700" letter-spacing="1.2">02 · ESTABLISH CURRENT STATE</text>
+<text x="42" y="271" fill="#f2f6fa" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Governed evaluation</text>
+<text x="42" y="306" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26">History-derived + persisted state</text>
+<text x="42" y="340" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26">Acceptance + current selection</text>
+<line x1="42" y1="371" x2="598" y2="371" stroke="#1c405c"/>
+<text x="42" y="412" fill="#72b7eb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" font-weight="700" letter-spacing="1.2">03 · ADVISE &amp; PRESENT</text>
+<text x="42" y="451" fill="#f2f6fa" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Advisory progression</text>
+<text x="42" y="486" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26">Current profile · Governed read snapshot</text>
+<line x1="42" y1="512" x2="598" y2="512" stroke="#1c405c"/>
+<text x="320" y="539" text-anchor="middle" fill="#9fb9cc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="650">READ SNAPSHOT != AUTHORITY != PERMISSION</text>
+</svg>

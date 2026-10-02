@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
 <title id="title">Capability Lab compact architecture overview</title>
-<desc id="desc">Three-stage conceptual overview: observe and interpret; establish current state; advise and present. The strip is intentionally compact. Exact governed contracts remain in the full pipeline documentation.</desc>
+<desc id="desc">Three-stage conceptual overview: observe and interpret; establish current state; advise and present. Exact governed contracts remain in the full pipeline documentation.</desc>
 <defs>
   <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
     <path d="M28 0H0V28" fill="none" stroke="#17334b" stroke-width="1" opacity=".22"/>
@@ -29,6 +29,5 @@
 <path d="M765 107h25" stroke="#5c9fcf" stroke-width="2"/>
 <path d="m787 101 9 6-9 6" fill="none" stroke="#5c9fcf" stroke-width="2"/>
 <line x1="48" y1="205" x2="1152" y2="205" stroke="#1c405c"/>
-<text x="48" y="236" fill="#8da9bf" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="650" letter-spacing=".9">COMPACT MENTAL MODEL · EXACT CONTRACTS IN THE FULL GOVERNED PIPELINE</text>
-<text x="1152" y="236" text-anchor="end" fill="#9fb9cc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">READ SNAPSHOT != CAPABILITY AUTHORITY != PERMISSION</text>
+<text x="600" y="236" text-anchor="middle" fill="#9fb9cc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="650" letter-spacing=".7">READ SNAPSHOT != CAPABILITY AUTHORITY != PERMISSION</text>
 </svg>
