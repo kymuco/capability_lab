@@ -34,14 +34,30 @@ def test_readme_has_compact_modern_public_front_door():
 
 def test_readme_architecture_visual_preserves_governed_boundaries():
     text = README.read_text(encoding="utf-8")
+    strip = (ROOT / "docs" / "assets" / "capability-lab-architecture-strip.svg").read_text(
+        encoding="utf-8"
+    )
 
-    assert "```mermaid" in text
-    assert 'H["Human review"]' in text
-    assert 'E["Neutral evidence"]' in text
-    assert 'A["Explicit acceptance"]' in text
-    assert 'S["Current-state selection"]' in text
-    assert 'G["Advisory progression + current profile"]' in text
-    assert 'R["Governed product/read snapshot"]' in text
+    assert "docs/assets/capability-lab-architecture-strip.svg" in text
+    assert "```mermaid" not in text
+
+    for phrase in (
+        "OBSERVE &amp; INTERPRET",
+        "ESTABLISH CURRENT STATE",
+        "ADVISE &amp; PRESENT",
+        "External observation",
+        "Human-reviewed evidence",
+        "Governed evaluation",
+        "Acceptance + current selection",
+        "Advisory progression",
+        "Governed read snapshot",
+    ):
+        assert phrase in strip
+
+    assert 'height="260"' in strip
+    assert "linearGradient" not in strip
+    assert "zoom" not in strip.lower()
+    assert "pan" not in strip.lower()
 
     assert "!= CURRENT-STATE SELECTION AUTHORITY" in text
     assert "!= PROGRESSION AUTHORITY" in text

@@ -98,19 +98,10 @@ observation
 
 ## The complete public path
 
-```mermaid
-flowchart LR
-    O[External observation] --> R[Human-reviewed evidence]
-    R --> C[Capability claim]
-    C --> E[Governed evaluations]
-    E --> S[Derived + persisted state]
-    S --> A[Explicit acceptance]
-    A --> X[Current-state selection]
-    X --> P[Advisory progression]
-    X --> V[Complete current profile]
-    P --> W[Governed product/read snapshot]
-    V --> W
-```
+![Compact Capability Lab architecture overview: observe and interpret, establish current state, then advise and present.](assets/capability-lab-architecture-strip.svg)
+
+The strip is intentionally compact. [Follow the governed pipeline](governed-pipeline.md) for the exact
+stage-by-stage contracts.
 
 Executable end-to-end audits cover the path from reviewed external observation through governed current state
 and through the product/read boundary without adding a shortcut around the existing gates.

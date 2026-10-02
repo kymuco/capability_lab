@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+<title id="title">Capability Lab compact architecture overview</title>
+<desc id="desc">Three-stage conceptual overview: observe and interpret; establish current state; advise and present. The strip is intentionally compact. Exact governed contracts remain in the full pipeline documentation.</desc>
+<defs>
+  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+    <path d="M28 0H0V28" fill="none" stroke="#17334b" stroke-width="1" opacity=".22"/>
+    <circle cx="0" cy="0" r="1" fill="#326d9d" opacity=".26"/>
+  </pattern>
+</defs>
+<rect width="1200" height="260" rx="22" fill="#06111c"/>
+<rect x="1" y="1" width="1198" height="258" rx="21" fill="none" stroke="#1e405c" stroke-width="2"/>
+<rect width="1200" height="260" rx="22" fill="url(#grid)" opacity=".48"/>
+<line x1="400" y1="30" x2="400" y2="205" stroke="#1c405c"/>
+<line x1="800" y1="30" x2="800" y2="205" stroke="#1c405c"/>
+<text x="48" y="53" fill="#72b7eb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700" letter-spacing="1.7">01 · OBSERVE &amp; INTERPRET</text>
+<text x="48" y="95" fill="#f2f6fa" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="27" font-weight="700">External observation</text>
+<text x="48" y="132" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">Human-reviewed evidence</text>
+<text x="48" y="168" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">Bounded capability claim</text>
+<text x="438" y="53" fill="#72b7eb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700" letter-spacing="1.7">02 · ESTABLISH CURRENT STATE</text>
+<text x="438" y="95" fill="#f2f6fa" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="27" font-weight="700">Governed evaluation</text>
+<text x="438" y="132" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">History-derived + persisted state</text>
+<text x="438" y="168" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">Acceptance + current selection</text>
+<text x="838" y="53" fill="#72b7eb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700" letter-spacing="1.7">03 · ADVISE &amp; PRESENT</text>
+<text x="838" y="95" fill="#f2f6fa" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="27" font-weight="700">Advisory progression</text>
+<text x="838" y="132" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">Current profile</text>
+<text x="838" y="168" fill="#c7d6e3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">Governed read snapshot</text>
+<path d="M365 107h25" stroke="#5c9fcf" stroke-width="2"/>
+<path d="m387 101 9 6-9 6" fill="none" stroke="#5c9fcf" stroke-width="2"/>
+<path d="M765 107h25" stroke="#5c9fcf" stroke-width="2"/>
+<path d="m787 101 9 6-9 6" fill="none" stroke="#5c9fcf" stroke-width="2"/>
+<line x1="48" y1="205" x2="1152" y2="205" stroke="#1c405c"/>
+<text x="48" y="236" fill="#8da9bf" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="650" letter-spacing=".9">COMPACT MENTAL MODEL · EXACT CONTRACTS IN THE FULL GOVERNED PIPELINE</text>
+<text x="1152" y="236" text-anchor="end" fill="#9fb9cc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">READ SNAPSHOT != CAPABILITY AUTHORITY != PERMISSION</text>
+</svg>

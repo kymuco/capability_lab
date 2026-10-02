@@ -69,20 +69,12 @@ automatic closed-loop judge of a person.
 
 ## How it works
 
-```mermaid
-flowchart LR
-    O["External observation"] --> H["Human review"]
-    H --> E["Neutral evidence"]
-    E --> I["Reviewed bounded interpretation"]
-    I --> C["Capability claim"]
-    C --> V["Governed evaluation"]
-    V --> D["Complete-history capability state"]
-    D --> P["Persistence"]
-    P --> A["Explicit acceptance"]
-    A --> S["Current-state selection"]
-    S --> G["Advisory progression + current profile"]
-    G --> R["Governed product/read snapshot"]
-```
+<p align="center">
+  <img src="docs/assets/capability-lab-architecture-strip.svg" alt="Compact Capability Lab architecture overview: observe and interpret, establish current state, then advise and present." width="100%">
+</p>
+
+This is the compact mental model. [Follow the full governed pipeline](docs/governed-pipeline.md) for the exact
+stage-by-stage contracts.
 
 The product/read boundary remains a projection, not authority:
 

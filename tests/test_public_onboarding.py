@@ -8,6 +8,7 @@ README = ROOT / "README.md"
 DOCS_INDEX = ROOT / "docs" / "index.md"
 GETTING_STARTED = ROOT / "docs" / "getting-started.md"
 SNAPSHOT = ROOT / ".github" / "assets" / "capability-lab-player-window-snapshot.svg"
+ARCHITECTURE_STRIP = ROOT / "docs" / "assets" / "capability-lab-architecture-strip.svg"
 ZENSICAL = ROOT / "zensical.toml"
 
 
@@ -90,6 +91,19 @@ def test_docs_landing_uses_the_included_demo_without_claiming_it_is_the_generic_
     assert "presentation demo is intentionally separate from the generic governed write-path proof" in text
     assert "PR11." not in text
     assert "PR12." not in text
+
+
+def test_public_overview_diagrams_are_readable_without_mermaid_viewer():
+    readme = README.read_text(encoding="utf-8")
+    docs_index = DOCS_INDEX.read_text(encoding="utf-8")
+    strip = ARCHITECTURE_STRIP.read_text(encoding="utf-8")
+
+    assert "docs/assets/capability-lab-architecture-strip.svg" in readme
+    assert "assets/capability-lab-architecture-strip.svg" in docs_index
+    assert "```mermaid" not in readme
+    assert "```mermaid" not in docs_index
+    assert 'height="260"' in strip
+    assert "READ SNAPSHOT != CAPABILITY AUTHORITY != PERMISSION" in strip
 
 
 def test_five_minute_introduction_stays_plain_language():
